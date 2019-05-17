@@ -1,12 +1,13 @@
-import React from "react";
+import React, { Component } from 'react';
 
-class Test extends Component() {
+class Test extends Component {
   state = {
-    test: "test"
+    title: '',
+    body: ''
   };
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/posts/1")
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
       .then(response => response.json())
       .then(data =>
         this.setState({
@@ -17,28 +18,30 @@ class Test extends Component() {
   }
 
   // componentWillMount() {
-  //   console.log("componentWillMount...");
+  //   console.log('componentWillMount...');
   // }
 
   // componentDidUpdate() {
-  //   console.log("componentDidUpdate...");
+  //   console.log('componentDidUpdate...');
   // }
 
   // componentWillUpdate() {
-  //   console.log("componentWillUpdate...");
+  //   console.log('componentWillUpdate...');
   // }
 
   // componentWillReceiveProps(nextProps, nextState) {
-  //   console.log("componentWillReceiveProps...");
+  //   console.log('componentWillReceiveProps...');
   // }
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    return null;
-  }
+  // static getDerivedStateFromProps(nextProps, prevState) {
+  //   return {
+  //     test: 'something'
+  //   };
+  // }
 
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log("getSnapshotBeforeUpdate...");
-  }
+  // getSnapshotBeforeUpdate(prevProps, prevState) {
+  //   console.log(' getSnapshotBeforeUpdate...');
+  // }
 
   render() {
     const { title, body } = this.state;

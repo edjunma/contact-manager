@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class AddContact extends Component {
   constructor(props) {
@@ -21,13 +21,13 @@ class AddContact extends Component {
   };
 
   static defaultProps = {
-    name: "Fred Smith",
-    email: "fred@yahoo.com",
-    phone: "777-777-7777"
+    name: 'Fred Smith',
+    email: 'fred@yahoo.com',
+    phone: '777-777-7777'
   };
 
   render() {
-    const { name, email, phone } = this.state;
+    const { name, email, phone } = this.props;
     return (
       <div className="card mb-3">
         <div className="card-header">Add Contact</div>
@@ -51,7 +51,7 @@ class AddContact extends Component {
                 name="email"
                 className="form-control form-control-lg"
                 placeholder="Enter Email..."
-                defaultValue={name}
+                defaultValue={email}
                 ref={this.emailInput}
               />
             </div>
@@ -62,7 +62,7 @@ class AddContact extends Component {
                 name="phone"
                 className="form-control form-control-lg"
                 placeholder="Enter Phone..."
-                defaultValue={name}
+                defaultValue={phone}
                 ref={this.phoneInput}
               />
             </div>
